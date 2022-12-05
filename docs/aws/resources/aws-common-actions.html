@@ -5404,12 +5404,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-org.html#additional-azure-instructions">Additional Azure Instructions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/cask.html">cask: easy custodian exec via docker</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#install">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#run">Run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#build">Build</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-mailer.html">c7n-mailer: Custodian Mailer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#message-relay">Message Relay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#tutorial">Tutorial</a><ul>
@@ -5458,6 +5452,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -5699,6 +5697,24 @@ all tags from the related resource should be copied to the original resource.</p
 <span class="w">          </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ebs</span><span class="w"></span>
 <span class="w">          </span><span class="nt">skip_missing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span><span class="w"></span>
 <span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VolumeId</span><span class="w"></span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In the event that the resource type is not supported in Cloud Custodian but
+is supported in the resources groups tagging api, use the resourcegroupstaggingapi
+resource type to reference the resource. The value should be an ARN for the
+related resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">copy-tags-from-unsupported-resource</span><span class="w"></span>
+<span class="w">      </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ebs-snapshot</span><span class="w"></span>
+<span class="w">      </span><span class="nt">actions</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">copy-related-tag</span><span class="w"></span>
+<span class="w">          </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resourcegroupstaggingapi</span><span class="w"></span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tag:a-resource-tag</span><span class="w"></span>
 <span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="w"></span>
 </pre></div>
 </div>
