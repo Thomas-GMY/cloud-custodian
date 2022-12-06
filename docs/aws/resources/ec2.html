@@ -2860,11 +2860,25 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html">Tencent Cloud Common Filters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#check-permissions">check-permissions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#event">event</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#marked-for-op">marked-for-op</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#metrics">metrics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#reduce">reduce</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/tencentcloud-common-filters.html#value">value</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tencentcloud/resources/group-cam.html">cam resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/cam-policy.html">tencentcloud.cam-policy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-policy.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-policy.html#actions">Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tencentcloud/resources/cam-user.html">tencentcloud.cam-user</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-user.html#filters">Filters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tencentcloud/resources/cam-user.html#actions">Actions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../tencentcloud/resources/group-cbs.html">cbs resources</a><ul>
@@ -5404,12 +5418,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-org.html#additional-azure-instructions">Additional Azure Instructions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tools/cask.html">cask: easy custodian exec via docker</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#install">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#run">Run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tools/cask.html#build">Build</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-mailer.html">c7n-mailer: Custodian Mailer</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#message-relay">Message Relay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-mailer.html#tutorial">Tutorial</a><ul>
@@ -5458,6 +5466,10 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html">Custodian policies for Infrastructure Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#install">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-left.html#outputs">Outputs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/c7n-logexporter.html">c7n-log-exporter: Cloud watch log exporter automation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#features">Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tools/c7n-logexporter.html#assumptions">Assumptions</a></li>
@@ -7276,6 +7288,8 @@ to the snapshot.  This is mutually exclusive with
 will just be stopped.</p>
 <div class="toggle docutils container">
 <div class="header docutils container" style=""></div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">properties</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">force</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
 <span class="w">  </span><span class="nt">hibernate</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boolean</span><span class="w"></span>
 <span class="w">  </span><span class="nt">terminate-ephemeral</span><span class="p">:</span><span class="w"></span>
