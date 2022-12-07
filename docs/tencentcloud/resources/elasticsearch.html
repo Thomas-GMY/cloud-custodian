@@ -5610,12 +5610,26 @@
              
   <section id="tencentcloud-elasticsearch">
 <span id="id1"></span><h1>tencentcloud.elasticsearch<a class="headerlink" href="#tencentcloud-elasticsearch" title="Permalink to this headline">¶</a></h1>
-<p>”
-elasticsearch - Tencent Cloud Elasticsearch Service (ES) is a cloud-managed Elasticsearch</p>
-<blockquote>
-<div><p>service that is highly available and scalable</p>
-</div></blockquote>
+<dl class="simple">
+<dt>elasticsearch - Tencent Cloud Elasticsearch Service (ES) is a cloud-managed Elasticsearch</dt><dd><p>service that is highly available and scalable</p>
+</dd>
+</dl>
 <p><a class="reference external" href="https://www.tencentcloud.com/document/product/845/16478?lang=en&amp;pg=">https://www.tencentcloud.com/document/product/845/16478?lang=en&amp;pg=</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">policies</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tencentcloud-elasticsearch</span><span class="w"></span>
+<span class="w">  </span><span class="nt">resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tencentcloud.elasticsearch</span><span class="w"></span>
+<span class="w">  </span><span class="nt">filters</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">value</span><span class="w"></span>
+<span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NodeInfoList.NodeType</span><span class="w"></span>
+<span class="w">      </span><span class="nt">op</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">in</span><span class="w"></span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ES.S1.MEDIUM4</span><span class="w"></span>
+</pre></div>
+</div>
 <section id="filters">
 <h2>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h2>
 <blockquote>
